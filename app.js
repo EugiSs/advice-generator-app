@@ -1,15 +1,18 @@
-window.addEventListener('DOMContentLoaded', getAdvice);
+window.onload = getAdvice();
 
-document.querySelector('.advice__btn').addEventListener('click', getAdvice);
+let adviceId = document.querySelector('.advice__id span');
+let adviceText = document.querySelector('.advice__text');
+let btn = document.querySelector('.advice__btn')
 
-function toggleAdvice({ slip: { id, advice } }) {
-	document.querySelector('.advice__id span').innerHTML = `${id}`;
-	document.querySelector('.advice__text').innerHTML = `${advice}`;
-};
+btn.addEventListener('click', getAdvice);
 
-async function getAdvice() {
-	let res = await fetch('https://api.adviceslip.com/advice');
-	let data = await res.json();
-
-	toggleAdvice(data);
+function getAdvice() {
+	fetch('https://api.adviceslip.com/advice', {
+		cache: "no-cache"
+	})
+	.then(res => { return res.json() })
+	.then(data => {
+		adviceId.textContent = data.slip.id;
+		adviceText.textContent = data.slip.advice;
+	})
 };
