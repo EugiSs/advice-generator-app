@@ -14,7 +14,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click](https://evgiss.github.io/advice-generator-app/)
+- Solution URL: [Click](https://eugiss.github.io/advice-generator-app/)
 
 ## My process
 
