@@ -32,4 +32,4 @@ I am learning to work with API
 
 ## Author
 
-- Frontend Mentor - [@Evgi](https://www.frontendmentor.io/profile/EugiSs)
+- Frontend Mentor - [@Eugi](https://www.frontendmentor.io/profile/EugiSs)
